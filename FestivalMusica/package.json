@@ -1,0 +1,19 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "aprendiendo SASS Y NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SAAS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Thomas Dery",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.6"
+  }
+}
