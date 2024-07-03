@@ -171,3 +171,4 @@ let numerosOrdenados = numeros.sort((a, b) => a - b);
 // reverse()
 let numerosInvertidos = numeros.reverse();
 // Invierte el orden de los elementos en un array. Ejemplo: let numerosInvertidos = numeros.reverse();
+
