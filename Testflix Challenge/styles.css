@@ -1,0 +1,183 @@
+:root {
+    /* colores */
+    --negro: #383838;
+    --rosa-solido: rgb(225,108,252);
+    
+
+    /* fuentes */
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(src/imgs/BREAKINGBAD\ 1.png);
+    background-position: center center;
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* GLOBALES */
+
+/* GLOBAL */
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--fuenteHeading);
+}
+
+img {
+    max-width: 100%;
+}
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+
+
+
+/* HEADER/NAVBAR */
+.header {
+    padding: 3rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.contenedor-titulo {
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+}
+
+.titulo {
+    font-size: 5rem;
+    font-family: var(--fuente-principal);
+    font-weight: bold;
+    background: rgb(225,108,252);
+    background: linear-gradient(90deg, rgba(225,108,252,0.7595413165266106) 0%, rgba(255,140,235,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.titulo span {
+    font-weight: 200;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    column-gap: 8rem;
+}
+
+
+#navbar-texto {
+    text-decoration: none;
+    color: white;
+    font-weight: 100 bold;
+    font-size: 2.6rem;
+    font-family: var(--fuente-principal);
+}
+
+
+/* CUERPO PRINCIPAL */
+
+.contenedor-principal {
+    display: grid;
+    justify-items: center; /* Alineación horizontal de todos los elementos del grid */
+    grid-template-columns: repeat(3, 1fr); /* Corrección: 3 columnas, como indicado en el comentario */
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.main-title {
+    grid-column: 1 / 3; /* Abarca 2 columnas */
+    margin-top: 4rem;
+    margin-right: 20rem;
+    grid-row: 2 / 3;
+    font-family: var(--fuente-principal);
+}
+
+.main-title h1 {
+    font-size: 8rem;
+    background: -webkit-linear-gradient(left, rgb(225,108,252), rgb(255,105,180));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente, mostrando el degradado del fondo */
+}
+.main-title h2 {
+    color: black;
+    font-size: 20rem;
+    font-family: var(--fuente-principal);
+    font-weight: bold;
+}
+
+.main-title input {
+    background-color: transparent; /* Hace el fondo transparente */
+    border: none; /* Elimina el borde predeterminado */
+    outline: none; /* Elimina el resaltado al enfocar */
+
+}
+
+.boton {
+    background-color: black; /* Elimina el fondo blanco predeterminado */
+    border: none; /* Elimina el borde predeterminado */
+    display: inline-block;
+    font-family: var(--fuente-principal);
+    padding: 1.5rem;
+}
+
+.boton-reproducir, .boton-lista {
+    padding: 1.5rem 5rem;
+}
+
+.boton-reproducir input, .boton-lista input {
+    color: white;
+}
+
+.boton-reproducir img {
+    margin-right: 1rem;
+    transform: translateY(3px);
+}
+
+.boton-lista {
+    
+}
+
+.boton-lista img {
+    height: 2.5rem;
+    transform: translateY(7px);
+    margin-right: 1rem;
+}
+
+.sidebar {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    min-height: 68rem;
+}
