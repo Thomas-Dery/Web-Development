@@ -186,8 +186,24 @@ img {
 
 /* CAROUSEL */
 
-.sidebar {
+.carousel-container {
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 100%; 
     grid-column: 3 / 4;
-    grid-row: 1 / 3;
-    min-height: 68rem;
-}
+    grid-row: 1 / 4;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    flex-direction: column;
+    animation: slide 9s infinite linear;
+  }
+  
+  .carousel-slide img {
+    width: 100%; /* Ajusta esto para controlar el ancho de las imágenes */
+    margin: 15px 0; /* Espacio entre imágenes */
+  }
+  
+ 
