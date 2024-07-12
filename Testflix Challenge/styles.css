@@ -31,8 +31,6 @@ body {
     background-attachment: fixed;
 }
 
-/* GLOBALES */
-
 /* GLOBAL */
 .contenedor {
     max-width: 120rem;
@@ -45,7 +43,7 @@ a {
 }
 
 h1,h2,h3,h4 {
-    font-family: var(--fuenteHeading);
+    font-family: var(--fuente-principal);
 }
 
 img {
@@ -62,7 +60,7 @@ img {
 
 /* HEADER/NAVBAR */
 .header {
-    padding: 3rem;
+    padding: 4rem;
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -75,7 +73,7 @@ img {
 }
 
 .titulo {
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: var(--fuente-principal);
     font-weight: bold;
     background: rgb(225,108,252);
@@ -97,14 +95,32 @@ img {
     column-gap: 8rem;
 }
 
+#menu {
+    width: 35px;
+    height: 15px;
+    transform: translateY(30%);
+}
+
+#notificacion {
+    width: 30px;
+    height: 35px;
+}
+
+#perfil {   
+    width: 30px;
+    height: 25px;
+}
 
 #navbar-texto {
     text-decoration: none;
     color: white;
     font-weight: 100 bold;
-    font-size: 2.6rem;
+    font-size: 2rem;
     font-family: var(--fuente-principal);
 }
+
+
+
 
 
 /* CUERPO PRINCIPAL */
@@ -113,13 +129,13 @@ img {
     display: grid;
     justify-items: center; /* Alineación horizontal de todos los elementos del grid */
     grid-template-columns: repeat(3, 1fr); /* Corrección: 3 columnas, como indicado en el comentario */
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .main-title {
     grid-column: 1 / 3; /* Abarca 2 columnas */
-    margin-top: 7rem;
-    grid-row: 2 / 3;
+    margin-top: 23%;
+    grid-row: 2 / 4;
     font-family: var(--fuente-principal);
 }
 
@@ -184,36 +200,153 @@ img {
 }
 
 /* CAROUSEL */
-
-.tendencias {
+.carousel-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    margin-top: 5rem;
+    margin-left: 7rem;
 }
 
-.tendencias img {
-    margin-right: 65%;
+.carousel-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 3.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
 
+.carousel-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.dropdown-icon {
+    width: 7%;
 }
 
 .carousel-container {
-    max-height: 300px;
-    overflow: hidden;
+    width: 200px; /* Ancho del carousel */
+    height: 150%; /* Alto del carousel */
     position: relative;
-    width: 100%; 
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
-  }
-  
-  .carousel-slide {
+    border-radius: 10px;
+}
+
+
+.carousel-arriba,
+.carousel-abajo {
+    width: 20px; /* Ajuste del tamaño de las flechas */
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-arriba {
+    top: -5px; /* Ajuste de posición de la flecha arriba */
+}
+
+.carousel-abajo {
+    bottom: -25px; /* Ajuste de posición de la flecha abajo */
+}
+
+
+.carousel-inner {
     display: flex;
-    flex-direction: column;
-    animation: slide 9s infinite linear;
-  }
-  
-  .carousel-slide img {
-    width: 30%; /* Ajusta esto para controlar el ancho de las imágenes */
-    margin: 15px 0; /* Espacio entre imágenes */
-  }
-  
- 
+    flex-direction: column; /* Dirección vertical */
+    height: 100%;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 150px; /* Altura de cada ítem del carousel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* MEDIA QUIERIES */
+
+@media (max-width: 500) { /* MOBILE */
+    .header {
+        padding: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contenedor-titulo {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .agregar-pelicula {
+        margin-bottom: 1rem;
+    }
+
+    .navbar div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #menu {
+        width: 30px;
+        height: 30px;
+    }
+
+    #notificacion {
+        width: 30px;
+        height: 30px;
+    }
+
+    #perfil {
+        width: 30px;
+        height: 30px;
+    }
+
+    #navbar-texto {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) { /* TAMAÑO PROMEDIO DE TABLET */
+    
+}
+
+@media (min-width: 1440) {
+    
+}
